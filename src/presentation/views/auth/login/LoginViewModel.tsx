@@ -1,10 +1,6 @@
 import {Text} from "react-native";
 import {useState} from "react";
-
-type LoginData = {
-    email: string;
-    password: string;
-}
+import { LoginData } from "../../../../domain/entities/login-interface";
 
 
 const LoginViewModel = () => {
