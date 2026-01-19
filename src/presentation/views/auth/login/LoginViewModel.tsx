@@ -1,6 +1,7 @@
 import {Text} from "react-native";
 import {useState} from "react";
 import { LoginData } from "../../../../domain/entities/login-interface";
+import { loginUseCase } from "../../../../domain/useCases/loginUseCase";
 
 
 const LoginViewModel = () => {
@@ -14,6 +15,7 @@ const LoginViewModel = () => {
         };
 
         if (validate(data)){
+            const response = loginUseCase(data);
             alert(`Email: ${data.email}, Contraseña: ${data.password}`)
             console.log(data)
         }
