@@ -1,9 +1,10 @@
-import {TextInput, View, Text, TouchableOpacity, StyleSheet} from "react-native";
+import {TextInput, View, Text, TouchableOpacity} from "react-native";
 import {styles} from "./LoginStyle";
 import viewModel from "./LoginViewModel"
 import {useNavigation} from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { RootStackParamList } from "../../../../../App";
+import {RootStackParamList} from "../../../navigation/RootNavigator";
+import {ButtonWithIcon} from "../../../sharedComponents/ButtonWithIcon";
 
 
 const LoginView = () => {
@@ -38,7 +39,10 @@ const LoginView = () => {
 
             <TouchableOpacity
                 style={styles.continue}
-                onPress={() => navigation.navigate('Registro')}
+                onPress={() => {
+                    iniciarSesion()    
+
+                }}
             >
                 <Text style={{textAlign: 'center', color: 'white', fontWeight: 'bold', fontSize: 17}}>Continue with Email</Text>
             </TouchableOpacity>
@@ -47,7 +51,7 @@ const LoginView = () => {
 
             <TouchableOpacity
                 style={styles.continue2}
-                onPress={() => navigation.navigate('Registro')}
+                onPress={() => navigation.navigate('Home')}
             >
                 <Text style={{textAlign: 'center', fontSize: 17}}>Continue with Google</Text>
             </TouchableOpacity>
@@ -59,6 +63,16 @@ const LoginView = () => {
             >
                 <Text style={{textAlign: 'center', fontSize: 17}}>Continue with Apple</Text>
             </TouchableOpacity>
+
+            <ButtonWithIcon
+                text={"Entrar"}
+                fnDeOtroComponente={() => {
+                    iniciarSesion();
+                    navigation.navigate('Home');
+                }}
+                type="lg"
+                iconName="sign-in"
+            />
 
             {/*<TouchableOpacity*/}
             {/*    style={styles.buttonSubmit}*/}
