@@ -63,6 +63,53 @@ export const styles = StyleSheet.create({
         fontWeight: "bold",
         fontSize: 18,
         color: "#0D714D"
+    },
+
+    headerContainer: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        paddingHorizontal: 20,
+        paddingTop: 10,
+        paddingBottom: 20,
+    },
+    headerTitle: {
+        fontSize: 20,
+        fontWeight: "bold",
+        width: "70%",
+    },
+    horizontalScrollParams: {
+        paddingHorizontal: 20,
+        paddingBottom: 20,
+    },
+    horizontalItemContainer: {
+        marginRight: 15,
+        width: 140,
+        backgroundColor: "#f5f5f5",
+        borderRadius: 15,
+        padding: 10,
+        alignItems: "center",
+    },
+    horizontalImageContainer: {
+        width: 100,
+        height: 100,
+        marginBottom: 10,
+    },
+    horizontalImage: {
+      width: "100%",
+        height: "100%",
+        borderRadius: 10,
+    },
+    horizontalTitle: {
+        fontWeight: "bold",
+        fontSize: 14,
+        textAlign: "center",
+        marginBottom: 5,
+    },
+    horizontalPrice: {
+        fontWeight: "bold",
+        color: "#0D714D",
+        fontSize: 14,
     }
 
 });

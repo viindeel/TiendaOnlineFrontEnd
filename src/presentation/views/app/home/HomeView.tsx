@@ -9,20 +9,55 @@ const HomeView = () => {
         <SafeAreaView style={{flex: 1, backgroundColor: "white"}}>
 
 
-            {/* Titulo  y ver carrito*/}
-            <View style = {{paddingTop: 20}}>
-                <Text style={styles.titleView}>Tienda Online</Text>
+            <View style = {styles.headerContainer}>
+                <Text style={styles.headerTitle}>Bienvenido de nuevo, NombreUsuario</Text>
+                <ButtonWithIcon
+                    iconName="shopping-cart"
+                    fnDeOtroComponente={() => {}}
+                    text=""
+                />
             </View>
 
 
+            <View>
+                <Text style={{paddingHorizontal: 20, fontSize: 18, fontWeight: 'bold', marginBottom: 10}}>Destacados</Text>
+                <ScrollView horizontal = {true} showsHorizontalScrollIndicator={false} contentContainerStyle={styles.horizontalScrollParams}>
+                    <View style={styles.horizontalItemContainer}>
+                        <View style={styles.horizontalImageContainer}>
+                            <Image style={styles.horizontalImage} source={require("../../../../../assets/productos/white-cup-and-plate-of-tea-on-transparent-background-free-png.png")} resizeMode="cover"/>
+                        </View>
+                        <Text style={styles.horizontalTitle}>Té de Limón</Text>
+                        <Text style={styles.horizontalPrice}>12.5€</Text>
+                    </View>
 
-            {/* Scroll horizontal */}
+                    <View style={styles.horizontalItemContainer}>
+                        <View style={styles.horizontalImageContainer}>
+                             <Image style={styles.horizontalImage} source={require("../../../../../assets/productos/white-cup-and-plate-of-tea-on-transparent-background-free-png.png")} resizeMode="cover"/>
+                        </View>
+                        <Text style={styles.horizontalTitle}>Té Verde</Text>
+                        <Text style={styles.horizontalPrice}>10.5€</Text>
+                    </View>
 
-            <ScrollView horizontal = {true}>
-            </ScrollView>
+                    <View style={styles.horizontalItemContainer}>
+                        <View style={styles.horizontalImageContainer}>
+                             <Image style={styles.horizontalImage} source={require("../../../../../assets/productos/white-cup-and-plate-of-tea-on-transparent-background-free-png.png")} resizeMode="cover"/>
+                        </View>
+                        <Text style={styles.horizontalTitle}>Café con Leche</Text>
+                        <Text style={styles.horizontalPrice}>8.0€</Text>
+                    </View>
+
+                    <View style={styles.horizontalItemContainer}>
+                         <View style={styles.horizontalImageContainer}>
+                             <Image style={styles.horizontalImage} source={require("../../../../../assets/productos/white-cup-and-plate-of-tea-on-transparent-background-free-png.png")} resizeMode="cover"/>
+                         </View>
+                        <Text style={styles.horizontalTitle}>Té Negro</Text>
+                        <Text style={styles.horizontalPrice}>14.0€</Text>
+                    </View>
+
+                </ScrollView>
+            </View>
 
 
-            {/* Scroll vertical */}
             <ScrollView style={{flex: 1, paddingVertical: 20}}>
 
                 <View style={styles.container}>
@@ -34,7 +69,7 @@ const HomeView = () => {
                         <Text style={styles.titleProduct}>Titulo del proctuo 1</Text>
                         <Text style={styles.descProduct}>Descripcion corta del producto 1</Text>
                         <View style={styles.actionContainer}>
-                            <Text style={styles.priceProducts}>12.6€</Text>
+                            <Text style={styles.priceProducts}>17.0€</Text>
                             <ButtonWithIcon
                                 text={"Comprar"}
                                 fnDeOtroComponente={() => alert("Presionado")}
