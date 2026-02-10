@@ -58,7 +58,7 @@ const HomeView = () => {
             </View>
 
 
-            <ScrollView style={{flex: 1, paddingVertical: 20}}>
+            <ScrollView style={{flex: 1, paddingVertical: 10}}>
 
                 <View style={styles.container}>
                     <View style={styles.imageContainer}>

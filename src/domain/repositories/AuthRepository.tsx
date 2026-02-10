@@ -1,6 +1,9 @@
-import { LoginData, UserInterface } from "../entities/login-interface";
+import { DataResponseAPI } from "../../data/sources/remote/models/DataResponseAPI";
+import { LoginData } from "../entities/login-interface";
 
 export interface AuthRepository {
 
-    login(data: LoginData): Promise<UserInterface | void> // el promise la hace asincrona
+    login(data: LoginData): Promise<DataResponseAPI> // el promise la hace asincrona
+    
+    register(data: any): Promise<DataResponseAPI>
 }
